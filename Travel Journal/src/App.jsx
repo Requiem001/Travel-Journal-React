@@ -1,5 +1,6 @@
 import { useState } from 'react'
-
+import Header from "./components/header"
+import Entry from "./components/Entry"
 
 
 
@@ -7,7 +8,16 @@ function App() {
  
 
   return (
-   <h1>hi</h1>
+    <>
+    <Header />
+    <div className = "log-list">
+    <Entry />
+    <Entry />
+    <Entry />
+    
+    </div>
+    
+   </>
   )
 }
 
