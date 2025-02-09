@@ -1,23 +1,23 @@
-export default function Entry() {
+export default function Entry(props) {
     return (
         <div className = "entry">
-            <img className = "photo" src = "/japan.png" />
+            <img className = "photo" src = {props.entry.img.src} />
 
             <div className = "info">
                 <div className = "adress">
                     <img className = "marker-icon" src = '/marker.png' />
-                    <p className = "city">JAPAN</p>
-                    <a className = "google-link" href = "https://google.com">View on Google Maps</a>
+                    <p className = "city">{props.entry.country}</p>
+                    <a className = "google-link" href = {props.entry.googleMapsLink}>View on Google Maps</a>
                 </div>  
                 <p className = "description">
                     <span className = "location">
-                        Mount Fuji
+                        {props.entry.title}
                     </span>
                     <span className = "date">
-                    12 Jan, 2021 - 24 Jan, 2021
+                        {props.entry.dates}
                     </span>
                     <span className = "content">
-                    Mount Fuji is the tallest mountain in Japan, standing at 3,776 meters (12,380 feet). Mount Fuji is the single most popular tourist site in Japan, for both Japanese and foreign tourists.
+                        {props.entry.text}
                     </span>
                 </p>
                 
